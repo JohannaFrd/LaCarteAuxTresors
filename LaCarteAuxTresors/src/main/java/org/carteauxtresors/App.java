@@ -1,4 +1,4 @@
-package org.example;
+package org.carteauxtresors;
 
 /**
  * Hello world!
