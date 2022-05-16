@@ -4,15 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f609bbc-09c1-4a17-b21c-ff78900f269a" name="Changes" comment="build : Add maven configuration" />
+    <list default="true" id="4f609bbc-09c1-4a17-b21c-ff78900f269a" name="Changes" comment="feat : add board factory &#10;&#10;🆕 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10;🆕 New tests for the board Factory &#10;🆕 New data set">
+      <change afterPath="$PROJECT_DIR$/../.idea/LaCarteAUxTresors.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/data1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/data2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/data3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/wrongData" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/wrongData2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/wrongData3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/wrongData4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/carteauxtresors/BoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/App.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit3 Test Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
         <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
@@ -31,12 +62,101 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
+    "last_opened_file_path": "C:/Users/johan/IdeaProjects/LaCarteAUxTresors/LaCarteAuxTresors/src/data",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\johan\IdeaProjects\LaCarteAUxTresors\LaCarteAuxTresors\src\data" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.carteauxtresors" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn package" />
+      <command value="mvn compile" />
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.BoardTest">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.carteauxtresors.App" />
+      <module name="LaCarteAuxTresors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.carteauxtresors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BoardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LaCarteAuxTresors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.carteauxtresors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.carteauxtresors" />
+      <option name="MAIN_CLASS_NAME" value="org.carteauxtresors.BoardTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LaCarteAuxTresors [test]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="test" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.BoardTest" />
+      <item itemvalue="Maven.LaCarteAuxTresors [test]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BoardTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,7 +165,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652616629665</updated>
-      <workItem from="1652616630823" duration="754000" />
+      <workItem from="1652616630823" duration="1174000" />
+      <workItem from="1652617823136" duration="16409000" />
+      <workItem from="1652650668109" duration="547000" />
+      <workItem from="1652721531790" duration="6257000" />
     </task>
     <task id="LOCAL-00001" summary="build : Add maven configuration">
       <created>1652617187761</created>
@@ -54,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652617187761</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="build : rename packages">
+      <created>1652617469646</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652617469646</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -73,6 +203,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="build : Add maven configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="build : Add maven configuration" />
+    <MESSAGE value="build : rename packages" />
+    <MESSAGE value="feat : add board factory &#10;&#10; 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10; New tests for the board Factory &#10; New data set" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : add board factory &#10;&#10; 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10; New tests for the board Factory &#10; New data set" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
