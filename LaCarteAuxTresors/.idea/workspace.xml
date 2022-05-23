@@ -4,27 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f609bbc-09c1-4a17-b21c-ff78900f269a" name="Changes" comment="feat : add board factory &#10;&#10;🆕 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10;🆕 New tests for the board Factory &#10;🆕 New data set">
-      <change afterPath="$PROJECT_DIR$/../.idea/LaCarteAUxTresors.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/data1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/data2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/data3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/wrongData" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/wrongData2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/wrongData3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/wrongData4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/carteauxtresors/BoardTest.java" afterDir="false" />
+    <list default="true" id="4f609bbc-09c1-4a17-b21c-ff78900f269a" name="Changes" comment="feat : create board  &#10;&#10;🆕 new class  : &#10;    - Adventurer.java = Adventurer class which extends Object File&#10;    - Montain.java = montain class which extends Object File and implement square&#10;    - NormalSquare.java = montain class which extends Object File and implement square&#10;    - Tresorssquare = square class which extends Object File and implement square&#10;    - ObjectFile = new abstract class &#10;    &#10;🆕 new methods : &#10;    - checkIndex&#10;    - fillSquare&#10;    &#10;TODO : create new tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Adventurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Montain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/NormalSquare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/ObjectFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/TresorsSquare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/data1" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/carteauxtresors/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carteauxtresors/BoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,16 +26,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit3 Test Class" />
+        <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="main" />
         <entry key="$PROJECT_DIR$/.." value="main" />
       </map>
     </option>
@@ -58,23 +50,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "last_opened_file_path": "C:/Users/johan/IdeaProjects/LaCarteAUxTresors/LaCarteAuxTresors/src/data",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/johan/IdeaProjects/LaCarteAUxTresors/LaCarteAuxTresors/src/data&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\johan\IdeaProjects\LaCarteAUxTresors\LaCarteAuxTresors\src\data" />
@@ -121,6 +113,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BoardTest.testBoardFactoryWithDataset1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LaCarteAuxTresors" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.carteauxtresors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.carteauxtresors" />
+      <option name="MAIN_CLASS_NAME" value="org.carteauxtresors.BoardTest" />
+      <option name="METHOD_NAME" value="testBoardFactoryWithDataset1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LaCarteAuxTresors [test]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -148,12 +156,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.BoardTest.testBoardFactoryWithDataset1" />
       <item itemvalue="JUnit.BoardTest" />
       <item itemvalue="Maven.LaCarteAuxTresors [test]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BoardTest" />
+        <item itemvalue="JUnit.BoardTest.testBoardFactoryWithDataset1" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +178,11 @@
       <workItem from="1652616630823" duration="1174000" />
       <workItem from="1652617823136" duration="16409000" />
       <workItem from="1652650668109" duration="547000" />
-      <workItem from="1652721531790" duration="6257000" />
+      <workItem from="1652721531790" duration="8306000" />
+      <workItem from="1652813175339" duration="10255000" />
+      <workItem from="1652908270328" duration="1961000" />
+      <workItem from="1653228662044" duration="8906000" />
+      <workItem from="1653330149465" duration="2830000" />
     </task>
     <task id="LOCAL-00001" summary="build : Add maven configuration">
       <created>1652617187761</created>
@@ -184,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652617469646</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feat : add board factory &#10;&#10;🆕 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10;🆕 New tests for the board Factory &#10;🆕 New data set">
+      <created>1652729240302</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652729240302</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +226,8 @@
     <MESSAGE value="build : Add maven configuration" />
     <MESSAGE value="build : rename packages" />
     <MESSAGE value="feat : add board factory &#10;&#10; 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10; New tests for the board Factory &#10; New data set" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : add board factory &#10;&#10; 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10; New tests for the board Factory &#10; New data set" />
+    <MESSAGE value="feat : create board  &#10;&#10; new class  : &#10;    - Adventurer.java = Adventurer class which extends Object File&#10;    - Montain.java = montain class which extends Object File and implement square&#10;    - NormalSquare.java = montain class which extends Object File and implement square&#10;    - Tresorssquare = square class which extends Object File and implement square&#10;    - ObjectFile = new abstract class &#10;    &#10; new methods : &#10;    - checkIndex&#10;    - fillSquare&#10;    &#10;TODO : create new tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : create board  &#10;&#10; new class  : &#10;    - Adventurer.java = Adventurer class which extends Object File&#10;    - Montain.java = montain class which extends Object File and implement square&#10;    - NormalSquare.java = montain class which extends Object File and implement square&#10;    - Tresorssquare = square class which extends Object File and implement square&#10;    - ObjectFile = new abstract class &#10;    &#10; new methods : &#10;    - checkIndex&#10;    - fillSquare&#10;    &#10;TODO : create new tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

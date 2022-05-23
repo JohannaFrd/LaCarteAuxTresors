@@ -1,5 +1,7 @@
 package org.carteauxtresors;
 
-public interface Square {
+public interface Square  {
+
+     boolean AdventurerCanOn();
 
 }
