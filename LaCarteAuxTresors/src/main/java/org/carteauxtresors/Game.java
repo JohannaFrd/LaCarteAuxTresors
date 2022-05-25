@@ -1,10 +1,18 @@
 package org.carteauxtresors;
 
+import org.carteauxtresors.player.Adventurer;
+import org.carteauxtresors.player.Player;
+import org.carteauxtresors.square.ApplyVisitor;
+import org.carteauxtresors.square.Montain;
+import org.carteauxtresors.square.Square;
+import org.carteauxtresors.square.TresorsSquare;
+
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
@@ -13,13 +21,17 @@ import static org.carteauxtresors.Board.checkIndex;
 
 public class Game {
 
-    private final List<Player> players;
+
+    private final LinkedHashMap<Player, Position> squarePlayerHashMap ;
     private final Board board;
 
-    private final static Logger LOGGER = Logger.getLogger(Board.class.getName());
 
-    public Game(List<Player> players, Board board) {
-        this.players = players;
+    private static final ApplyVisitor applyVisitor = new ApplyVisitor();
+
+    private  static final Logger LOGGER = Logger.getLogger(Board.class.getName());
+
+    public Game(LinkedHashMap<Player, Position> players, Board board) {
+        this.squarePlayerHashMap = players;
         this.board = board;
     }
 
@@ -36,18 +48,14 @@ public class Game {
      * @return a optional of board
      */
     public static Optional<Game> gameFactory(String path){
-        /**
-         * Check parameters
-         */
+
         Objects.requireNonNull(path);
         if(path.isEmpty()){
             LOGGER.severe("Map file not found");
             return Optional.empty();
         }
 
-        /**
-         * Try with ressources to read configuration file
-         */
+
         try(Stream<String> lines = Files.lines(Path.of(path), Charset.defaultCharset())){
             LOGGER.info("File Found");
             Optional<Game> game = createGame(lines.toList());
@@ -101,33 +109,94 @@ public class Game {
             return Optional.empty();
         }
         Board.BoardBuilder boardBuilder = new Board.BoardBuilder(sizeX, sizeY);
-        List<Player> playerList = new ArrayList<>();
+        LinkedHashMap<Player, Position> playerList = new LinkedHashMap<>();
+
 
         lines.stream()
                 .filter(s -> ! s.startsWith("#"))
-                .filter(s -> s.matches("\\w - \\d+ - \\d+"))
+                .filter(s -> s.matches("\\w - \\d+ - \\d+") || s.matches("\\w - \\d+ - \\d+ - \\d+") || s.matches("\\w - \\w+ - \\d+ - \\d+ - \\w - \\w+") )
                 .filter(objects -> objects.length() >= 2)
                 .map(s -> Arrays.stream(s.replace(" ", "").split("-")) )
                 .forEach(stringStream -> {
-
                     var array =  stringStream.toArray(String[]::new);
-                    if (checkIndex(array, sizeX, sizeY)) return;
 
                     switch (array[0]){
                         case "A" -> {
-                            playerList.add(new Adventurer(array));
+                            playerList.put(new Adventurer(array), new Position(Integer.parseInt(array[2]), Integer.parseInt(array[3])));
                         }
                         case "T" -> {
-                           boardBuilder.setSquare(new TresorsSquare(array), Integer.parseInt(array[1]), Integer.parseInt(array[2]) );
+                            if (!checkIndex(array, sizeX, sizeY)) return;
+                            boardBuilder.setSquare(new TresorsSquare(array, null), Integer.parseInt(array[1]), Integer.parseInt(array[2]) );
                         }
                         case "M" -> {
-                            boardBuilder.setSquare(new Montain(array), Integer.parseInt(array[1]), Integer.parseInt(array[2]) );
+                            if (!checkIndex(array, sizeX, sizeY)) return;
+                            boardBuilder.setSquare(new Montain( null), Integer.parseInt(array[1]), Integer.parseInt(array[2]) );
                         }
                         default -> LOGGER.warning(" Instruction not found ");
                     }
                 } );
+
         Board finalBoard = boardBuilder.buildBoard();
-        return Optional.of(new Game(List.copyOf(playerList), finalBoard));
+        playerList.forEach((player, position) -> {
+            Square square = finalBoard.getSquare(position).accept(applyVisitor, player);
+            finalBoard.updateSquare(square, position);
+        });
+
+
+        return Optional.of(new Game( playerList, finalBoard));
     }
 
+    public void start(Path path){
+        AtomicBoolean on = new AtomicBoolean(true);
+        while (on.get()){
+            on.set(false);
+            squarePlayerHashMap.forEach((player, position) -> {
+                Position playerPosition = player.getNextMove(position);
+                if (playerPosition == null)  return;
+                if(playerPosition.positionX() > board.getSizeX() || playerPosition.positionY() > board.getSizeY()) {
+                    LOGGER.warning("out of board");
+                    return;
+                }
+                on.set(true);
+                if(playerPosition.positionX() > board.getSizeX()-1 || playerPosition.positionY() > board.getSizeY()-1 ) return;
+                Square newPositionSquare = board.getSquare(playerPosition);
+                if(newPositionSquare == null || newPositionSquare.getPlayer() != null){
+                    return;
+                }
+                Square square = newPositionSquare.accept(applyVisitor, player);
+                board.updateSquare(square, playerPosition);
+                board.getSquare(position).removePlayer();
+                squarePlayerHashMap.replace(player, playerPosition);
+            });
+        }
+
+        printIntoFile(path);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < board.getSizeX(); i++) {
+            for (int j = 0; j < board.getSizeY(); j++) {
+                Position position = new Position(i, j);
+                Square square = board.getSquare(position);
+                stringBuilder.append(square.toString(position)).append("\n");
+                if (square.getPlayer() != null) stringBuilder.append(square.getPlayer().toString(position)).append("\n");
+            }
+        }
+        return stringBuilder.toString();
+    }
+
+    /**
+     * Print into file.
+     *
+     * @param path the path
+     */
+    public void printIntoFile(Path path)  {
+        try(var writer = Files.newBufferedWriter(path)) {
+            writer.write(this.toString());
+        }catch (IOException e) {
+            LOGGER.severe("Imposible to write the result");
+        }
+    }
 }

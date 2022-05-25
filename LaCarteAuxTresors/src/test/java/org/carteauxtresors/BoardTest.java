@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.NoSuchElementException;
-import java.util.Optional;
+
 
 
 public class BoardTest extends TestCase {
@@ -27,7 +27,6 @@ public class BoardTest extends TestCase {
         var game = Game.gameFactory("src/data/data3");
         assertNotNull(game.get());
     }
-
 
     @Test
     public void testBoardFactoryWithWrongPathFile() {

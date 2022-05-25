@@ -4,18 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f609bbc-09c1-4a17-b21c-ff78900f269a" name="Changes" comment="feat : create board  &#10;&#10;🆕 new class  : &#10;    - Adventurer.java = Adventurer class which extends Object File&#10;    - Montain.java = montain class which extends Object File and implement square&#10;    - NormalSquare.java = montain class which extends Object File and implement square&#10;    - Tresorssquare = square class which extends Object File and implement square&#10;    - ObjectFile = new abstract class &#10;    &#10;🆕 new methods : &#10;    - checkIndex&#10;    - fillSquare&#10;    &#10;TODO : create new tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Adventurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Montain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/NormalSquare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/ObjectFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/TresorsSquare.java" afterDir="false" />
+    <list default="true" id="4f609bbc-09c1-4a17-b21c-ff78900f269a" name="Changes" comment="feat : create board  &#10;&#10;🆕 new class  : &#10;    - builderfactory&#10;&#10;Change : game factory &#10;    &#10;TODO : create new tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/direction/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/direction/East.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/direction/North.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/direction/South.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/direction/West.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/player/Adventurer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/square/ApplyVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/square/Montain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/square/NormalSquare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/square/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/square/SquareVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/square/TresorsSquare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/data1" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/data1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Adventurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Montain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/NormalSquare.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/ObjectFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/carteauxtresors/TresorsSquare.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/carteauxtresors/BoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/carteauxtresors/BoardTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +83,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.carteauxtresors" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\johan\IdeaProjects\LaCarteAUxTresors\LaCarteAuxTresors\src\data" />
     </key>
@@ -77,6 +95,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.carteauxtresors" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.carteauxtresors" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -84,13 +105,13 @@
       <command value="mvn compile" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BoardTest">
+  <component name="RunManager" selected="Application.org.carteauxtresors.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.carteauxtresors.App" />
       <module name="LaCarteAuxTresors" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.carteauxtresors.*" />
+          <option name="PATTERN" value="org.carteauxtresors.square.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,7 +123,7 @@
       <module name="LaCarteAuxTresors" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.carteauxtresors.*" />
+          <option name="PATTERN" value="org.carteauxtresors.square.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,7 +138,7 @@
       <module name="LaCarteAuxTresors" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.carteauxtresors.*" />
+          <option name="PATTERN" value="org.carteauxtresors.square.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,13 +176,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
+      <item itemvalue="Application.org.carteauxtresors.App" />
       <item itemvalue="JUnit.BoardTest.testBoardFactoryWithDataset1" />
       <item itemvalue="JUnit.BoardTest" />
       <item itemvalue="Maven.LaCarteAuxTresors [test]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.org.carteauxtresors.App" />
         <item itemvalue="JUnit.BoardTest" />
         <item itemvalue="JUnit.BoardTest.testBoardFactoryWithDataset1" />
       </list>
@@ -182,7 +204,9 @@
       <workItem from="1652813175339" duration="10255000" />
       <workItem from="1652908270328" duration="1961000" />
       <workItem from="1653228662044" duration="8906000" />
-      <workItem from="1653330149465" duration="2830000" />
+      <workItem from="1653330149465" duration="10258000" />
+      <workItem from="1653416630653" duration="12003000" />
+      <workItem from="1653493314029" duration="9783000" />
     </task>
     <task id="LOCAL-00001" summary="build : Add maven configuration">
       <created>1652617187761</created>
@@ -205,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652729240302</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat : create board  &#10;&#10;🆕 new class  : &#10;    - builderfactory&#10;&#10;Change : game factory &#10;    &#10;TODO : create new tests">
+      <created>1653333324424</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653333324425</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,7 +258,8 @@
     <MESSAGE value="build : rename packages" />
     <MESSAGE value="feat : add board factory &#10;&#10; 2 new classes : &#10;    - Board.java = a new classe to implemente and create board&#10;    - Square.java = a new interface for square type&#10;    &#10; New tests for the board Factory &#10; New data set" />
     <MESSAGE value="feat : create board  &#10;&#10; new class  : &#10;    - Adventurer.java = Adventurer class which extends Object File&#10;    - Montain.java = montain class which extends Object File and implement square&#10;    - NormalSquare.java = montain class which extends Object File and implement square&#10;    - Tresorssquare = square class which extends Object File and implement square&#10;    - ObjectFile = new abstract class &#10;    &#10; new methods : &#10;    - checkIndex&#10;    - fillSquare&#10;    &#10;TODO : create new tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : create board  &#10;&#10; new class  : &#10;    - Adventurer.java = Adventurer class which extends Object File&#10;    - Montain.java = montain class which extends Object File and implement square&#10;    - NormalSquare.java = montain class which extends Object File and implement square&#10;    - Tresorssquare = square class which extends Object File and implement square&#10;    - ObjectFile = new abstract class &#10;    &#10; new methods : &#10;    - checkIndex&#10;    - fillSquare&#10;    &#10;TODO : create new tests" />
+    <MESSAGE value="feat : create board  &#10;&#10; new class  : &#10;    - builderfactory&#10;&#10;Change : game factory &#10;    &#10;TODO : create new tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : create board  &#10;&#10; new class  : &#10;    - builderfactory&#10;&#10;Change : game factory &#10;    &#10;TODO : create new tests" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
